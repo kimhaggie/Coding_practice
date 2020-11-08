@@ -6,4 +6,4 @@
 되도록이면 python으로 풀 생각입니다. 정 안 풀리는 경우에만 C++로 풀 생각입니다.
 
 ------------------------
-> BOJ : https://www.acmicpc.net/ 백준 알고리즘
+> BOJ : https://www.acmicpc.net/ 백준 알고리즘 (pypy3는 시간복잡도 때문에 선택한 것입니다.)
