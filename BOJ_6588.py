@@ -1,5 +1,6 @@
 #6588
 import sys
+
 n = 1000000
 prime = [[0,1],[1,1]] + [[i,0] for i in range(2,n+1)]
 for i in range(2,n+1):
