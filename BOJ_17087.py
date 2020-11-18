@@ -7,6 +7,7 @@ def gcd(a,b):
         a=b
         b=tmp
     return a
+    
 
 N,S = map(int,sys.stdin.readline().rstrip('\n').split(' '))
 A = list(map(int,sys.stdin.readline().rstrip('\n').split(' ')))
