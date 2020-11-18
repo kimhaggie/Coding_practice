@@ -8,7 +8,6 @@ def gcd(a,b):
         b=tmp
     return a
     
-
 N,S = map(int,sys.stdin.readline().rstrip('\n').split(' '))
 A = list(map(int,sys.stdin.readline().rstrip('\n').split(' ')))
 for idx, val in enumerate(A):
