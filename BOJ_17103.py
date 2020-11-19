@@ -7,18 +7,22 @@ for _ in range(n):
     A.append(int(sys.stdin.readline().rstrip('\n')))
 max_A = max(A)
 
-prime = [[0,1],[1,1]] + [[i,0] for i in range(2,max_A+1)]
+prime = [1,1] + [0 for _ in range(2,max_A+1)]
+prime_number=[]
 for i in range(2,max_A+1):
-    if prime[i][1] == 0:
-        prime[i][1] = 2
+    if prime[i] == 0:
+        prime[i] = 2
+        prime_number.append(i)
         x = i + i
         while x < max_A+1:
-            prime[x][1] = 1
+            prime[x] = 1
             x += i
-
+            
 for val in A:
     ans=0
-    for i in range(int(val/2)+1):
-        if prime[i][1]==2 and prime[val-i][1]==2:
+    for i in prime_number:
+        if i >=int(val/2)+1:
+            break
+        if prime[val-i] == 2:
             ans+=1
     print(ans)
