@@ -10,13 +10,15 @@ def increase(a,n):
             if a[i] < a[idx] and tmp < dp[i] + 1:
                 tmp = dp[i] + 1
         dp[idx] = tmp
-    return dp[n-1]
+    return dp
 
 n = int(sys.stdin.readline().rstrip('\n'))
 a = list(map(int,sys.stdin.readline().rstrip('\n').split(' ')))
 ans = []
-for i in range(0,n):
-    ans.append(increase(a[:i+1],i+1)+increase(list(reversed(a[i:])),n-i)-1)
+dp1 = increase(a,n)
+dp2 = increase(a[::-1],n)
+for idx in range(n):
+    ans.append(dp1[idx]+dp2[n-idx-1]-1)
 if n==1:
     print(1)
 else:
