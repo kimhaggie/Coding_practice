@@ -11,24 +11,15 @@ dp[0][0][0] = a[0][0]
 dp[0][1][1] = a[0][1]
 dp[0][2][2] = a[0][2]
 for idx in range(1,n):
-    dp[idx][0][0] = min(dp[idx-1][0][1] + a[idx][0] if dp[idx-1][0][1]!=float('inf') else float('inf'),
-                     dp[idx-1][0][2] + a[idx][0] if dp[idx-1][0][2]!=float('inf') else float('inf'))
-    dp[idx][0][1] = min(dp[idx-1][0][0] + a[idx][1] if dp[idx-1][0][0]!=float('inf') else float('inf'),
-                     dp[idx-1][0][2] + a[idx][1] if dp[idx-1][0][2]!=float('inf') else float('inf'))
-    dp[idx][0][2] = min(dp[idx-1][0][0] + a[idx][2] if dp[idx-1][0][0]!=float('inf') else float('inf'),
-                     dp[idx-1][0][1] + a[idx][2] if dp[idx-1][0][1]!=float('inf') else float('inf'))
-    dp[idx][1][0] = min(dp[idx-1][1][1] + a[idx][0] if dp[idx-1][1][1]!=float('inf') else float('inf'),
-                     dp[idx-1][1][2] + a[idx][0] if dp[idx-1][1][2]!=float('inf') else float('inf'))
-    dp[idx][1][1] = min(dp[idx-1][1][0] + a[idx][1] if dp[idx-1][1][0]!=float('inf') else float('inf'),
-                     dp[idx-1][1][2] + a[idx][1] if dp[idx-1][1][2]!=float('inf') else float('inf'))
-    dp[idx][1][2] = min(dp[idx-1][1][0] + a[idx][2] if dp[idx-1][1][0]!=float('inf') else float('inf'),
-                     dp[idx-1][1][1] + a[idx][2] if dp[idx-1][1][1]!=float('inf') else float('inf'))
-    dp[idx][2][0] = min(dp[idx-1][2][1] + a[idx][0] if dp[idx-1][2][1]!=float('inf') else float('inf'),
-                     dp[idx-1][2][2] + a[idx][0] if dp[idx-1][2][2]!=float('inf') else float('inf'))
-    dp[idx][2][1] = min(dp[idx-1][2][0] + a[idx][1] if dp[idx-1][2][0]!=float('inf') else float('inf'),
-                     dp[idx-1][2][2] + a[idx][1] if dp[idx-1][2][2]!=float('inf') else float('inf'))
-    dp[idx][2][2] = min(dp[idx-1][2][0] + a[idx][2] if dp[idx-1][2][0]!=float('inf') else float('inf'),
-                     dp[idx-1][2][1] + a[idx][2] if dp[idx-1][2][1]!=float('inf') else float('inf'))
+    dp[idx][0][0] = min(dp[idx-1][0][1] + a[idx][0], dp[idx-1][0][2] + a[idx][0])
+    dp[idx][0][1] = min(dp[idx-1][0][0] + a[idx][1], dp[idx-1][0][2] + a[idx][1])
+    dp[idx][0][2] = min(dp[idx-1][0][0] + a[idx][2], dp[idx-1][0][1] + a[idx][2])
+    dp[idx][1][0] = min(dp[idx-1][1][1] + a[idx][0], dp[idx-1][1][2] + a[idx][0])
+    dp[idx][1][1] = min(dp[idx-1][1][0] + a[idx][1], dp[idx-1][1][2] + a[idx][1])
+    dp[idx][1][2] = min(dp[idx-1][1][0] + a[idx][2], dp[idx-1][1][1] + a[idx][2])
+    dp[idx][2][0] = min(dp[idx-1][2][1] + a[idx][0], dp[idx-1][2][2] + a[idx][0])
+    dp[idx][2][1] = min(dp[idx-1][2][0] + a[idx][1], dp[idx-1][2][2] + a[idx][1])
+    dp[idx][2][2] = min(dp[idx-1][2][0] + a[idx][2], dp[idx-1][2][1] + a[idx][2])
 #print(dp)
 ans = dp[-1]
 #print(ans)
