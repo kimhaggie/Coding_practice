@@ -74,7 +74,6 @@ U = str(pow(10,length))
 L = str(pow(10,length-1)-1)
 n_s = str(n)
 find = False
-back=-1
 up1 = upper(a,length,n_s)
 up2 = upper(a,length+1,U)
 low1 = lower(a[::-1],length,n_s)
