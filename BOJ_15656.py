@@ -19,4 +19,4 @@ a = list(map(int,sys.stdin.readline().rstrip('\n').split(' ')))
 a.sort()
 ans = func(a,n,m)
 for x in ans:
-    print(' '.join(map(str,x)))
+    sys.stdout.write(' '.join(map(str,x))+'\n')
