@@ -23,8 +23,8 @@ n = int(sys.stdin.readline().rstrip('\n'))
 W = []
 for _ in range(n):
     W.append(list(map(int,sys.stdin.readline().rstrip('\n').split(' '))))
-a = list(range(n))
-ans = []
+a = list(range(1,n))
+ans = [0]
 A = []
 tsp(a)
 print(min(A))
