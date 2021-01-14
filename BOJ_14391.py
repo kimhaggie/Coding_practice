@@ -1,6 +1,6 @@
 #14391
 import sys
-
+#비트마스크 풀이도 존재
 def sum_col(i,j,h,S):
     ans = ''
     for idx in range(i,i+h):
