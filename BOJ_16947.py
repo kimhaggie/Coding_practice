@@ -1,7 +1,6 @@
 #16947
 import sys
 from collections import deque
-
 sys.setrecursionlimit(10000)
 
 def find_circle(m,start,cur,visit,depth):
