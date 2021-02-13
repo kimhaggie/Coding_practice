@@ -6,6 +6,12 @@
 되도록이면 각 문제마다 카테고리를  것입니다. <br/>
 \*표시는 제가 느끼는 난이도를 나타내기 위합입니다.<br/>
 되도록이면 python으로 풀 생각입니다. 정 안 풀리는 경우에만 C++로 풀 생각입니다.
+
+----------------
+
+내가 문제를 풀면서 느낀 BEST풀이법<br/>
+알고리즘 구상 -> 시간복잡도 계산 -> 코드 빌드<br/>
+
 문제를 푸는 데 도움을 준 사이트 <br/>
 https://covenant.tistory.com/141 <br/>
 https://stackoverflow.com/questions/8421337/rotating-a-two-dimensional-array-in-python <br/>
