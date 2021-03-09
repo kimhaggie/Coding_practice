@@ -29,9 +29,10 @@ def DFS(path):
         if flag:
             path.append(idx)
             x = DFS(path)
-            if x != None and ans >= x:
+            if ans > x:
                 ans = x
             path.pop()
+    return ans
 
 N, M = map(int,sys.stdin.readline().rstrip('\n').split())
 friend = [set() for _ in range(N)]
