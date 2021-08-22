@@ -1,4 +1,4 @@
-#7:27
+#1:40
 
 def find(A,x):
     left = 0
@@ -12,7 +12,7 @@ def find(A,x):
         if A[mid]>=x and A[mid-1]<x:
             return mid
         if A[mid]>=x: 
-            right = mid
+            right = mid-1
         if A[mid]<x:
             left=mid+1
 
